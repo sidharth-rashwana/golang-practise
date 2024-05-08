@@ -12,7 +12,8 @@ import (
 )
 
 func stringSort(s string) []rune {
-	runes := []rune(s) // convert to rune
+	// convert string to rune
+	runes := []rune(s) 
 
 	sort.Slice(runes, func(i, j int) bool {
 		return runes[i] < runes[j]
