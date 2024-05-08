@@ -1,4 +1,4 @@
-//1. Write a Go function to count the number of characters in a string.
+//Write a Go function to count the number of characters in a string.
 
 package main
 

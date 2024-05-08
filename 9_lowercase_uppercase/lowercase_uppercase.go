@@ -22,7 +22,7 @@ func isLower(s string) bool {
 }
 
 func isUpper(s string) bool {
-
+	
 	for _, val := range s {
 		if !unicode.IsUpper(val) {
 			return false

@@ -1,4 +1,4 @@
-//2. Write a Go function to count the number of words in a string.
+//Write a Go function to count the number of words in a string.
 
 package main
 
@@ -11,7 +11,7 @@ import (
 
 func countWords(s string) int {
 	words := strings.Fields(s)
-	return len(words)
+	return len(words) //total words
 }
 
 func main() {

@@ -1,4 +1,4 @@
-/*3. Implement a function to find the maximum of three numbers.*/
+/*Implement a function to find the maximum of three numbers.*/
 
 package main
 

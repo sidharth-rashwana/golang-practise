@@ -1,4 +1,4 @@
-/*1. Print hello world*/
+/*Print hello world*/
 package main
 
 import "fmt"

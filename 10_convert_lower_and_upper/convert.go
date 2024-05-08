@@ -1,5 +1,4 @@
 // convert to lower and upper case
-
 package main
 
 import (

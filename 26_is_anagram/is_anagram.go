@@ -1,4 +1,5 @@
-//6. Write a Go function to check if two strings are anagrams of each other.
+// Write a Go function to check if two strings are anagrams of each other.
+// Anagrams are words or phrases formed by rearranging the letters of another word or phrase.
 
 package main
 
@@ -13,12 +14,10 @@ import (
 func stringSort(s string) []rune {
 	runes := []rune(s) // convert to rune
 
-	// sort the rune
 	sort.Slice(runes, func(i, j int) bool {
 		return runes[i] < runes[j]
 	})
 
-	// return the rune
 	return runes
 }
 
@@ -31,13 +30,7 @@ func isAnagram(s1 string, s2 string) bool {
 	string1 := stringSort(s1)
 	string2 := stringSort(s2)
 
-	for idx, _ := range string1 {
-		if string1[idx] != string2[idx] {
-			return false
-		}
-	}
-	return true
-
+	return string(string1) == string(string2)
 }
 
 func main() {

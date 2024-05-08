@@ -35,5 +35,4 @@ func main() {
 	s = strings.TrimSpace(s)
 	fmt.Println(removeWhitecase(s))
 	fmt.Println(removeWhitecaseM2(s))
-
 }

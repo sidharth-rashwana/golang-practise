@@ -18,8 +18,19 @@ func nonRepeat(s string) string {
 	}
 	return "nil"
 }
+
+func nonRepeatAll(s string) string {
+	x := ""
+	for _, val := range s {
+		if strings.Count(s, string(val)) == 1 {
+			x += string(val)
+		}
+	}
+	return x
+}
 func main() {
 	s, _ := bufio.NewReader(os.Stdin).ReadString('\n')
 	s = strings.TrimSpace(s)
 	fmt.Println(nonRepeat(s))
+	fmt.Println(nonRepeatAll(s))
 }
