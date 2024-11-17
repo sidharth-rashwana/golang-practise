@@ -25,5 +25,4 @@ func main(){
 	s1 :=[]int{1,2,3,4}
 	s2 :=[]int{2,3,5,8}
 	fmt.Println("Intersecting values: ",slices(s1,s2))
-
 }

@@ -1,5 +1,3 @@
-//Write a Go function to find the first recurring character in a string.
-
 package main
 
 import (
@@ -9,27 +7,21 @@ import (
 	"strings"
 )
 
-func findRecurringChars(s string) rune {
+func findRecurringChars(s string) string {
 
-	m := make(map[string]int)
-
+	m := make(map[rune]int)
 	for _, val := range s {
-		m[string(val)]++
-		if m[string(val)] > 1 {
-			return val
+		m[val]++
+		if m[val] > 1 {
+			return string(val)
 		}
 	}
-	return 0
+	return "All characters occured only once."
 }
 
 func main() {
+	fmt.Println("Enter a string : ")
 	s, _ := bufio.NewReader(os.Stdin).ReadString('\n')
 	s = strings.TrimSpace(s)
-	output := string(findRecurringChars(s))
-	fmt.Println(output)
-	if output == string(0) {
-		fmt.Println("No recurring character")
-	} else {
-		fmt.Println("Recurring character: ", string(output))
-	}
+	fmt.Println(findRecurringChars(s))
 }

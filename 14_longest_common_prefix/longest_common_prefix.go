@@ -24,10 +24,11 @@ func commonPrefix(s []string) string {
 	}
 
 	final := ""
-	for i := 0; i < len(shortest); i++ {
-		ch := shortest[i] // get the current character
+	for idx, _ := range shortest {
+		ch := shortest[idx] // get the current character
 		for _, str := range s {
-			if ch != str[i] {
+			// if not matching then only return
+			if ch != str[idx] {
 				return final
 			}
 		}
